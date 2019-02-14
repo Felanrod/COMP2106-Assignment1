@@ -1,5 +1,38 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header
+    nav#navbar.navbar.navbar-expand-md.navbar-light
+      a.navbar-brand(href='index.html') Joel F Murphy
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='index.html')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='first_year_work.html') 1st Year Work
+          li.nav-item
+            a.nav-link(href='second_year_work.html') 2nd Year Work
+          li.nav-item
+            a.nav-link(href='contact.html') Contact Me
+  main.container.my-4
+    section.row
+      h1.col-12.mb-5 Joel F Murphy's Web Development Portfolio
+      .card.text-center.col-md-3.col-sm-12.py-0.px-0.mx-auto(style='max-width: 250px')
+        img.card-img-top.w-100(src=headshot, alt="Joel F Murphy's Face")
+        footer.card-footer
+          p.mb-0 The devilishly handsome Joel F Murphy
+      p.col-md-6.col-sm-12.mt-4.mx-auto
+        | Hello, as you can tell from the heading, my name is Joel Murphy. I am currently in my last semester of Interactive Media Design - Web at Georgian College in Barrie, Ontario. I am a programmer first and a designer second. My developing experience is, in part, thanks to previously graduating from the Computer Programmer program at Georgian College in 2013.
+      hr.col-12
+      p.col-md-9.col-sm-12.mx-auto.text-center
+        | I am currently learning Node, Express, Mongo, React, how to make a site as accessible as possible, and advanced CSS animations.
+      p.col-md-9.col-sm-12.mx-auto.text-center You can find examples of my work at the links here:
+      .col-md-6.col-12.text-center
+        a.btn.btn-primary.mx-auto.my-4.px-md-5.px-auto.d-md-inline-block.d-block(href='first_year_work.html', role='button') 1st Year Work
+      .col-md-6.col-12.text-center
+        a.btn.btn-primary.mx-auto.my-4.px-md-5.px-auto.d-md-inline-block.d-block(href='second_year_work.html', role='button') 2nd Year Work
+
