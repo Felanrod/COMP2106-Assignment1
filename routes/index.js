@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'Joel F Murphy',
-    headshot: './images/headshot.png'
+    headshot: '/images/headshot.png'
   });
 });
 
