@@ -3,11 +3,31 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+//Connect to mongoose
+mongoose.connect(
+  'mongodb://Felanrod:Jfmuser9@ds021994.mlab.com:21994/joelfmurphy-portfolio',
+  {
+    useNewUrlParser: true
+  }
+);
+
+//Grab mongoose connection to 'listen' to error/open events
+var db = mongoose.connection;
+
+//When db emits an 'error' console log the error
+db.on('error', console.error.bind(console, 'Connection Error'));
+
+//When db emits 'open' console log connected only 1 time
+db.once('open', function(callback) {
+  console.log('Connected to mongodb');
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
