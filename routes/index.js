@@ -26,7 +26,7 @@ router.get('/contact', (req, res, next) => {
 /* GET services page. */
 router.get('/services', (req, res, next) => {
   res.render('services', {
-    title: 'Services'
+    title: 'My Services'
   });
 });
 
