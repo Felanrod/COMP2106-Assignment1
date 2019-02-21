@@ -5,7 +5,10 @@ const Work = require('../models/work');
 //GET /works
 router.get('/', (req, res, next) => {
     Work.find().then(works => {
-        res.render('works', { works });
+        res.render('works', {
+            title: 'My Work',
+            works
+        });
     });
 });
 
