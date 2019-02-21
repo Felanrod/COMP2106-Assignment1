@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	main.container
+		section.row
+			h1.col-12.mb-5 Contact Me
+			.col-md-8.col-sm-10.col-11.mx-auto
+				p
+					| Cell: 
+					a(href='tel:1-705-773-3404') 1 (705) 773-3404
+				p
+					| Email: 
+					a(href='mailto:j.murphy2@mycanadore.ca') j.murphy2@mycanadore.ca
+
+			form.col-md-8.col-sm-10.col-11.mx-auto(method="post")
+				.form-group
+					label(for="name") Name
+					input.form-control(id="name", name="name", type="text", required, placeholder="Name")
+				.form-group
+					label(for="email") Email
+					input.form-control(id="email", name="email", type="email", required, placeholder="Email")
+				.form-group
+					label(for="message") Message
+					textarea.form-control(id="message", name="message", required, placeholder="What would you like to say?")
+				button.btn.btn-primary(type="submit") Send Message

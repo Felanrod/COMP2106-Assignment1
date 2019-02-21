@@ -3,9 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', {
-    title: 'Joel F Murphy',
-    headshot: '/images/headshot.png'
+  res.render('about', {
+    title: 'Joel F Murphy'
   });
 });
 
