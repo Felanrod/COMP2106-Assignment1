@@ -6,13 +6,13 @@ mixin workCard(work)
 			.col-md-7.col-sm-12.card-body
 				h3.card-title #{work.title}
 				p.card-text #{work.description}
-				a.btn.btn-primary(href='#{work.link}', target='_blank', title='Opens link in new tab.') Go to Page
+				a.btn.btn-primary(href=`${work.link}`, target='_blank', title='Opens link in new tab.') Go to Page
 			.col-md-4.col-sm-12.ml-auto.mr-auto.ml-md-4.ml-lg-auto.mr-md-0.px-0(style='max-width: 300px')
-				img.w-100(src='#{work.thumbnail}', alt='')
+				img.w-100(src=`${work.thumbnail}`, alt='')
 
 block content
 	main#top.container.my-4
 		section.row
 			h1.col-12.mb-5 Work I've Done
-				each work in works
-					+workCard(work)
+			each work in works
+				+workCard(work)
