@@ -1,16 +1,18 @@
-block activeVars
-  -var active = 'Home'; //default
+//- Header.pug
+//- Joel Murphy
+//- https://joelfmurphy.herokuapp.com/
+//- Provides the global nav throughout the site.
 
 -var gNav = { 'Home': '/', 'My Work': '/works', 'My Services': '/services', 'About Me': '/about', 'Contact Me': '/contact' };
 header
   nav#navbar.navbar.navbar-expand-md.navbar-light
-    a.navbar-brand(href='/') Joel F Murphy
+    a.navbar-brand(href='/')= title + key
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.mr-auto
         each val, key in gNav
-          if(active === key)
+          if(title === key)
             li.nav-item.active
           else
             li.nav-item

@@ -1,3 +1,8 @@
+//- Index.js
+//- Joel Murphy
+//- https://joelfmurphy.herokuapp.com/
+//- Routes that send the user to the appropriate pages.
+
 var express = require('express');
 var router = express.Router();
 

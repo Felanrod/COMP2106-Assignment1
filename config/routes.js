@@ -1,3 +1,8 @@
+//- Routes.js
+//- Joel Murphy
+//- https://joelfmurphy.herokuapp.com/
+//- Contains which paths are used and what controllers. Keeps the app.js less cluttered.
+
 module.exports = [
     {
         path: '/',
@@ -9,19 +14,4 @@ module.exports = [
         name: 'Works',
         controller: require('../routes/works')
     }
-    // {
-    //     path: '/about',
-    //     name: 'About',
-    //     controller: require('../routes/index')
-    // },
-    // {
-    //     path: '/services',
-    //     name: 'Services',
-    //     controller: require('../routes/index')
-    // },
-    // {
-    //     path: '/contact',
-    //     name: 'Contact',
-    //     controller: require('../routes/index')
-    // }
 ];
