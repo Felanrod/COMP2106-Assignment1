@@ -6,7 +6,7 @@
 -var gNav = { 'Home': '/', 'My Work': '/works', 'My Services': '/services', 'About Me': '/about', 'Contact Me': '/contact' };
 header
   nav#navbar.navbar.navbar-expand-md.navbar-light
-    a.navbar-brand(href='/')= title + key
+    a.navbar-brand(href='/') Joel F Murphy
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
@@ -17,11 +17,5 @@ header
           else
             li.nav-item
           a.nav-link(href=val)= key
-        //- li.nav-item
-        //-   a.nav-link(href='/works') My Work
-        //- li.nav-item
-        //-   a.nav-link(href='/services') My Services
-        //- li.nav-item
-        //-   a.nav-link(href='/about') About Me
-        //- li.nav-item
-        //-   a.nav-link(href='/contact') Contact Me
+          //- Thought I could use this https://pugjs.org/language/iteration.html
+        //- To grab the key value, but it's only showing up as undefined
