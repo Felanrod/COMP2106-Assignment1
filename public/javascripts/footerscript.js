@@ -14,11 +14,11 @@ function getAllHeights(){
 		if (screenH < bodyInitH) {
 			mainTag.style.height = "auto";
 		} else {
-			mainTag.style.height = (screenH - footer.offsetHeight - header.offsetHeight) + "px";
+			mainTag.style.height = (screenH - footer.offsetHeight - header.offsetHeight - mainMarginH) + "px";
 		}
 	}
 }
-//- mainMarginH
+
 (function() {
 	prevH = -1;
 	getAllHeights();
