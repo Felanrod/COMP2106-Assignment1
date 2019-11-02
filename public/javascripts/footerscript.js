@@ -1,6 +1,7 @@
 let screenH;
 let prevH;
 let mainMarginH;
+const numCompensator = 23;
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 const mainTag = document.querySelector('main');
@@ -14,6 +15,7 @@ function getAllHeights(){
 		if (screenH <= bodyInitH) {
 			mainTag.style.height = "auto";
 		} else {
+			console.log('Url Location ' + window.location.href)
 			mainTag.style.height = (screenH - footer.offsetHeight - header.offsetHeight - mainMarginH) + "px";
 		}
 	}
