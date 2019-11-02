@@ -11,7 +11,7 @@ function getAllHeights(){
 	if (screenH != prevH) {
 		mainMarginH = parseInt(mainStyle.marginTop) + parseInt(mainStyle.marginBottom);
 		prevH = screenH;
-		if (screenH < bodyInitH) {
+		if (screenH <= bodyInitH) {
 			mainTag.style.height = "auto";
 		} else {
 			mainTag.style.height = (screenH - footer.offsetHeight - header.offsetHeight - mainMarginH) + "px";
