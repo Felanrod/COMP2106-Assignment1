@@ -15,8 +15,11 @@ function getAllHeights(){
 		if (screenH <= bodyInitH) {
 			mainTag.style.height = "auto";
 		} else {
-			console.log('Url Location ' + window.location.href)
-			mainTag.style.height = (screenH - footer.offsetHeight - header.offsetHeight - mainMarginH) + "px";
+			if (window.location.href === 'https://joelfmurphy.herokuapp.com/') {
+				mainTag.style.height = (screenH - footer.offsetHeight - header.offsetHeight - mainMarginH - numCompensator) + "px";
+			} else {
+				mainTag.style.height = (screenH - footer.offsetHeight - header.offsetHeight - mainMarginH) + "px";
+			}
 		}
 	}
 }
