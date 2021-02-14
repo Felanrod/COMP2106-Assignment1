@@ -6,33 +6,19 @@
 
 extends layout
 
-mixin workCard(work)
-	.card.text-center.col-md-10.col-sm-12.text-center.col-md-10.col-sm-12.py-0.px-0.mx-auto.my-2
-		.row.align-items-center
-			.col-md-7.col-sm-12.card-body
-				h3.card-title #{work.title}
-				p.card-text #{work.description}
-				if(work.title === "ASP.NET Database Site")
-					a.btn.btn-primary.disabled(href=`${work.link}`, target='_blank', title='Opens link in new tab.') Go to Page
-				else
-					a.btn.btn-primary(href=`${work.link}`, target='_blank', title='Opens link in new tab.') Go to Page
-			.col-md-4.col-sm-12.ml-auto.mr-auto.ml-md-4.ml-lg-auto.mr-md-0.px-0(style='max-width: 300px')
-				img.w-100(src=`${work.thumbnail}`, alt='')
-
 block content
-	main#top.container.my-4
-		section.row
-			h1.col-12.mb-5= title
-			.nav.nav-tabs(role='tablist')
-				a.nav-item.nav-link.active.rounded-top.show(id='firstYearTab', data-toggle='tab', href='#firstYearWork', role='tab', aria-controls='firstYearWork') 1st Year Work
-				a.nav-item.nav-link.rounded-top(id='secondYearTab', data-toggle='tab', href='#secondYearWork', role='tab', aria-controls='secondYearWork') 2nd Year Work
-			.tab-content
-				section.tab-pane.fade.active.show(id='firstYearWork', role='tabpanel', aria-labelledby='firstYearTab')
-					each work in works
-						if(work.schoolYear === 1)
-							+workCard(work)
-				section.tab-pane.fade(id='secondYearWork', role='tabpanel', aria-labelledby='secondYearTab')
-					each work in works
-						if(work.schoolYear === 2)
-							+workCard(work)
-	script(src='../../javascripts/secondyeartab.js')
+  main.container.my-4
+    section.row
+      h1.col-12.mb-5= title
+      h3.col-12 My name is Joel F Murphy and I do web stuff.
+      p.col-12
+        | I have been going to school nearly my entire life because I love to learn, well that and the job market ain't what it used to be. I had originally attended Waterloo University, after high school, for programming, but found it wasn't as hands on as I would've liked. I then turned my attention to my second favourite class in high school and went to Canadore College in North Bay for TV and Video Production. After graduating there I entered a market that was fairly dried up of paying jobs, so I did what anyone else would do. Go back to school for programming.
+      p.col-12
+        | This time I went to Georgian College in Barrie and it was a lot more hands on than my first post-secondary experience. After graduating on the Dean's List I got a job. Using a programming language I had used back in high school I was developing apps for teachers to use in classrooms. It was great, but the company lost funding their second year and had to dissolve that part of the business.
+      p.col-12
+        | After two years of not being able to find a programming gig that I knew the language for and spending a couple months creating a website for a local restaurant that shortly after closed down, I went back to Georgian College, this time for Web Design. I just recently graduated on the Dean's List, having completed a co-op at Avetti Commerce.
+      .col-md-8.col-sm-10.col-11.mx-auto
+        p
+          a(href='https://www.linkedin.com/in/joelfmurphy/') LinkedIn
+        p
+          a(href='https://github.com/Felanrod/') GitHub
