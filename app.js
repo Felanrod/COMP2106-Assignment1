@@ -9,7 +9,8 @@ var app = express();
 
 //Connect to mongoose
 mongoose.connect(
-  'mongodb://Felanrod:Jfmuser9@ds021994.mlab.com:21994/joelfmurphy-portfolio',
+  //'mongodb://Felanrod:Jfmuser9@ds021994.mlab.com:21994/joelfmurphy-portfolio'
+  'mongodb+srv://Felanrod:Jfmuser9@joelfmurphy-portfolio.oyfgz.mongodb.net/joelfmurphy-portfolio?retryWrites=true&w=majority',
   {
     useNewUrlParser: true
   }
