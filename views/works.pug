@@ -26,6 +26,7 @@ block content
 			.nav.nav-tabs(role='tablist')
 				a.nav-item.nav-link.active.rounded-top.show(id='firstYearTab', data-toggle='tab', href='#firstYearWork', role='tab', aria-controls='firstYearWork') 1st Year Work
 				a.nav-item.nav-link.rounded-top(id='secondYearTab', data-toggle='tab', href='#secondYearWork', role='tab', aria-controls='secondYearWork') 2nd Year Work
+				a.nav-item.nav-link.rounded-top(id='websites', data-toggle='tab', href='#websites', role='tab', aria-controls='websites') Websites
 			.tab-content
 				section.tab-pane.fade.active.show(id='firstYearWork', role='tabpanel', aria-labelledby='firstYearTab')
 					each work in works
@@ -34,5 +35,9 @@ block content
 				section.tab-pane.fade(id='secondYearWork', role='tabpanel', aria-labelledby='secondYearTab')
 					each work in works
 						if(work.schoolYear === 2)
+							+workCard(work)
+				section.tab-pane.fade(id='websites', role='tabpanel', aria-labelledby='websitesTab')
+					each work in works
+						if(work.schoolYear === 3)
 							+workCard(work)
 	script(src='../../javascripts/secondyeartab.js')
